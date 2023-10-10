@@ -8,6 +8,11 @@ public class Vilao extends Personagem {
         this.setSuperpoder(superpoder);
         this.tempoDePrisao = tempoDePrisao;
     }
+    @Override
+    public String toString() {
+        return String.format("Vilão: %s | Superpoder: %s | Tempo de prisão: %d anos.",
+                getNome(), getSuperpoder(), getTempoDePrisao());
+    }
 
     public Integer getTempoDePrisao() {
         return tempoDePrisao;

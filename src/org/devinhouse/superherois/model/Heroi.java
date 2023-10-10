@@ -9,6 +9,12 @@ public class Heroi extends Personagem {
         this.nomeVidaReal = nomeVidaReal;
     }
 
+    @Override
+    public String toString() {
+        return String.format("Heroi: %s | Superpoder: %s | Nome Vida Real: %s.",
+                getNome(), getSuperpoder(), getNomeVidaReal());
+    }
+
     public String getNomeVidaReal() {
         return nomeVidaReal;
     }
