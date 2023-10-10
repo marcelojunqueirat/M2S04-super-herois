@@ -1,6 +1,7 @@
 package org.devinhouse.superherois;
 
 import org.devinhouse.superherois.cli.Display;
+import org.devinhouse.superherois.exception.OpcaoInvalidaException;
 import org.devinhouse.superherois.model.Heroi;
 import org.devinhouse.superherois.model.Opcao;
 import org.devinhouse.superherois.model.Personagem;
@@ -21,7 +22,7 @@ public class Aplicacao {
             try {
                 opcao = Opcao.converter(codigo);
                 processar(opcao);
-            } catch (IllegalArgumentException e) {
+            } catch (OpcaoInvalidaException e) {
                 display.exibirMensagem(e.getMessage());
             }
         } while (opcao != Opcao.SAIR);
